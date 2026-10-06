@@ -38,13 +38,15 @@ document.addEventListener('DOMContentLoaded', function () {
   const codeEl = document.getElementById('typing-code');
   if (!codeEl) return;
 
-  // Each token has its own syntax-highlight color
+  // Python REPL colors (matches the reference image)
   const tokens = [
-    { text: '>>> ',                        color: '#E06C75' }, // prompt — red-orange
-    { text: 'print',                       color: '#C678DD' }, // keyword — magenta
-    { text: '("',                          color: '#FFFFFF' }, // parens — white
-    { text: "Hello, I'm Rya \u{1F44B}",    color: '#98C379' }, // string — green
-    { text: '")',                          color: '#FFFFFF' }, // parens — white
+    { text: '>>> ',                        color: '#D4D4AA' }, // prompt — olive
+    { text: 'print',                       color: '#DCDCAA' }, // keyword — yellow
+    { text: '(',                           color: '#D4D4D4' }, // paren — light gray
+    { text: '"',                           color: '#D4D4D4' }, // quote — light gray
+    { text: "Hello, I'm Rya \u{1F44B}",    color: '#9CDCFE' }, // string — light blue
+    { text: '"',                           color: '#D4D4D4' }, // quote — light gray
+    { text: ')',                           color: '#D4D4D4' }, // paren — light gray
   ];
 
   // Flatten into an array of single characters (handles emoji correctly)
