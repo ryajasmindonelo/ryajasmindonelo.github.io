@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Python REPL colors
   const tokens = [
     { text: '>>> ',                        color: '#9CA3AF' }, // prompt — light gray
-    { text: 'print',                       color: '#6A9BD5' }, // keyword — the blue from your image
+    { text: 'print',                       color: '#9CA3AF' }, // keyword — the blue from your image
     { text: '(',                           color: '#9CA3AF' }, // paren — light gray
     { text: '"',                           color: '#9CA3AF' }, // quote — light gray
     { text: "Hello, I'm Rya \u{1F44B}",    color: '#6A9BD5' }, // string — same blue
