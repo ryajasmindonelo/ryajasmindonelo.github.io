@@ -1,17 +1,17 @@
 /* ============================================================
-   BLUE PALETTE
+   COLOR SYSTEM — one navy, used everywhere
    ============================================================ */
 :root {
-  --primary: #2563EB;        /* Blue — links, accents */
-  --primary-dark: #1E3A8A;   /* Navy — nav background */
-  --primary-hover: #3B82F6;  /* Light blue — hovers */
-  --primary-light: #EFF6FF;  /* Ice blue — chips, tints */
-  --title: #1D4ED8;          /* Deep blue — headings */
-  --text: #1F2937;           /* Body text */
-  --text-light: #4B5563;     /* Muted text */
-  --bg: #FFFFFF;
-  --card-bg: #F9FAFB;
-  --border: #E5E7EB;
+  --navy: #1E3A5F;          /* the color from your image */
+  --navy-dark: #16293F;     /* hover / pressed */
+  --navy-darker: #0F1D2E;   /* deepest accents */
+
+  --text: #1A1A1A;          /* body text */
+  --text-muted: #5A6270;    /* muted text */
+
+  --white: #FFFFFF;
+  --gray-50: #F7F8F9;       /* neutral card bg */
+  --border: #DDDFE2;        /* neutral border */
 }
 
 /* ============================================================
@@ -32,7 +32,7 @@ body {
   font-size: 17px;
   line-height: 1.65;
   color: var(--text);
-  background-color: var(--bg);
+  background-color: var(--white);
   margin: 0;
   padding: 0;
 }
@@ -43,7 +43,7 @@ body p {
 
 h1, h2, h3, h4 {
   font-family: 'Poppins', sans-serif;
-  color: var(--title);
+  color: var(--navy);
   margin-top: 0;
   line-height: 1.25;
 }
@@ -53,24 +53,26 @@ h2 { font-size: 1.8rem; margin-top: 2rem; }
 h3 { font-size: 1.3rem; }
 
 a {
-  color: var(--primary);
+  color: var(--navy);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--primary-dark);
+  color: var(--navy-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ============================================================
    NAVIGATION
    ============================================================ */
 .navigation {
-  background-color: var(--primary-dark);
-  color: #fff;
+  background-color: var(--navy);
+  color: var(--white);
   padding: 0.5rem 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 10px rgba(30, 58, 95, 0.25);
 }
 
 .nav-inner {
@@ -85,11 +87,14 @@ a:hover {
   font-family: 'Poppins', sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
+  text-decoration: none;
 }
 
 .brand:hover {
-  color: var(--primary-light);
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.85;
 }
 
 .nav-links {
@@ -101,11 +106,12 @@ a:hover {
 }
 
 .nav-links a {
-  color: #fff;
+  color: var(--white);
   font-size: 1rem;
   font-weight: 500;
   padding: 0.4rem 0;
   position: relative;
+  text-decoration: none;
 }
 
 .nav-links a::after {
@@ -115,7 +121,7 @@ a:hover {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--primary-light);
+  background-color: var(--white);
   transition: width 0.25s ease;
 }
 
@@ -126,14 +132,15 @@ a:hover {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--primary-light);
+  color: var(--white);
+  text-decoration: none;
 }
 
 .toggle-button {
   display: none;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--white);
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.2rem 0.5rem;
@@ -149,47 +156,48 @@ a:hover {
   margin: 2rem auto;
   padding: 0 2rem;
   gap: 2.5rem;
+  align-items: flex-start;
 }
 
+/* ---------- Left column — solid navy panel ---------- */
 .left-column {
   flex: 1;
   min-width: 260px;
   text-align: center;
+  background-color: var(--navy);
+  color: var(--white);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
 }
 
-.right-column {
-  flex: 2;
-  min-width: 320px;
-}
-
-/* ---------- Left column ---------- */
 .image-container {
-  background-color: var(--primary);
-  padding: 12px;
+  background-color: var(--white);
+  padding: 8px;
   display: inline-block;
   width: 70%;
-  max-width: 240px;
-  border-radius: 16px;
+  max-width: 220px;
+  border-radius: 14px;
   margin-bottom: 1.2rem;
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 6px 16px rgba(15, 29, 46, 0.35);
 }
 
 .image-container img {
   width: 100%;
   display: block;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
-.title {
-  font-size: 2.6rem;
+.left-column .title {
+  color: var(--white);
+  font-size: 2.4rem;
   margin-bottom: 0.2rem;
 }
 
 .subtitle {
-  font-size: 1rem;
-  color: var(--text-light);
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.75);
   margin-top: 0;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
 }
 
 .handle {
@@ -200,23 +208,28 @@ a:hover {
 }
 
 .handle a {
-  color: var(--primary);
-  transition: color 0.2s;
+  color: var(--white);
+  transition: opacity 0.2s ease;
+  text-decoration: none;
+}
+
+.handle a:hover {
+  color: var(--white);
+  opacity: 0.7;
+  text-decoration: none;
 }
 
 .handle i {
   font-size: 1.6rem;
 }
 
-.handle a:hover {
-  color: var(--primary-dark);
-}
-
-/* Skills chips */
+/* Skills chips — outline on navy */
 .skills h2 {
-  font-size: 1.2rem;
-  margin-bottom: 0.8rem;
+  color: var(--white);
+  font-size: 1.15rem;
   margin-top: 0;
+  margin-bottom: 0.9rem;
+  letter-spacing: 0.02em;
 }
 
 .chip-list {
@@ -230,37 +243,45 @@ a:hover {
 }
 
 .chip-list li {
-  background-color: var(--primary-light);
-  color: var(--primary-dark);
-  font-size: 0.82rem;
-  font-weight: 600;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 500;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
-  border: 1px solid #DBEAFE;
+  border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 /* ---------- Right column ---------- */
+.right-column {
+  flex: 2;
+  min-width: 320px;
+}
+
 .right-column h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: var(--navy);
 }
 
 .right-column h2 {
   margin-top: 2.5rem;
-  border-bottom: 2px solid var(--primary-light);
-  padding-bottom: 0.3rem;
+  color: var(--navy);
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--navy);
 }
 
 .section-note {
   font-size: 0.95rem;
-  color: var(--text-light);
+  color: var(--text-muted);
   margin-bottom: 1.5rem;
 }
 
-/* Project cards */
+/* ---------- Project cards ---------- */
 .card {
-  background-color: var(--card-bg);
-  border-left: 5px solid var(--primary);
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--navy);
   border-radius: 10px;
   padding: 1.2rem 1.5rem;
   margin-bottom: 1.5rem;
@@ -269,18 +290,19 @@ a:hover {
 
 .card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 10px 24px rgba(30, 58, 95, 0.12);
 }
 
 .card h3 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-size: 1.15rem;
+  color: var(--navy);
 }
 
 .card-sub {
   font-weight: 400;
-  color: var(--text-light);
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
@@ -293,7 +315,7 @@ a:hover {
   margin: 0.4rem 0 0.8rem 1.2rem;
   padding: 0;
   font-size: 0.95rem;
-  color: var(--text-light);
+  color: var(--text-muted);
 }
 
 .methods li {
@@ -308,8 +330,9 @@ a:hover {
 }
 
 .tag {
-  background-color: var(--primary-light);
-  color: var(--primary-dark);
+  background-color: transparent;
+  color: var(--navy);
+  border: 1px solid var(--navy);
   font-size: 0.75rem;
   font-weight: 600;
   padding: 0.2rem 0.6rem;
@@ -317,15 +340,15 @@ a:hover {
 }
 
 /* ============================================================
-   FOOTER
+   FOOTER — navy bookend
    ============================================================ */
 .footer {
+  background-color: var(--navy);
+  color: var(--white);
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.85rem;
-  color: var(--text-light);
-  border-top: 1px solid var(--border);
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 /* ============================================================
@@ -349,7 +372,7 @@ a:hover {
     max-width: 200px;
   }
 
-  .title {
+  .left-column .title {
     font-size: 2rem;
   }
 
