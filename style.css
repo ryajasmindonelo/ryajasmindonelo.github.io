@@ -171,7 +171,7 @@ a:hover {
 }
 
 .content-single h1 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   margin-bottom: 0.4rem;
 }
 
@@ -298,7 +298,8 @@ a:hover {
 }
 
 .section-note {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
   color: var(--text-muted);
   margin-bottom: 1.5rem;
 }
@@ -369,6 +370,53 @@ a:hover {
 .card p {
   margin: 0.4rem 0 0.8rem;
   font-size: 0.98rem;
+}
+
+/* ---------- Card title as a link with an arrow ---------- */
+.card-title {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1.15rem;
+}
+
+.card-title a {
+  color: var(--navy);
+  text-decoration: none;
+  display: inline;
+}
+
+.card-title a:hover {
+  color: var(--navy-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.card-title .arrow {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 0.85em;
+  color: var(--navy);
+  transition: transform 0.2s ease;
+}
+
+.card-title a:hover .arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Tags sit directly under the title */
+.card .tags {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+}
+
+/* "Methods & Skills:" heading */
+.methods-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0.9rem 0 0.4rem;
+  letter-spacing: 0.01em;
 }
 
 .methods {
@@ -486,7 +534,8 @@ a:hover {
     padding: 1rem 1.1rem;
   }
 
-  .card h3 {
+  .card h3,
+  .card-title {
     font-size: 1.05rem;
   }
 }
