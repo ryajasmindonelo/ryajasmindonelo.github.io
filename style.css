@@ -317,7 +317,7 @@ a:hover {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: var(--navy);
-  font-size: 17px;      /* same as body text */
+  font-size: 17px;
   line-height: 1.65;
   margin: 1.2rem 0 0.4rem;
 }
@@ -325,7 +325,7 @@ a:hover {
 .intro-list {
   margin: 0 0 1rem 1.2rem;
   padding: 0;
-  font-size: 17px;      /* same as body text */
+  font-size: 17px;
   line-height: 1.65;
   color: var(--text);
 }
@@ -350,11 +350,16 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.02em;
   display: inline-block;
-  margin-top: 1.5rem;      /* pushes it down to align with the photo */
-  margin-bottom: 1.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;   /* ← tightened gap */
   box-shadow: 0 6px 16px rgba(30, 58, 95, 0.2);
   min-height: 1.3em;
   line-height: 1.2;
+}
+
+/* Tighten the paragraph immediately after the code line */
+.code-line + p {
+  margin-top: 0.4rem;
 }
 
 #typing-code {
