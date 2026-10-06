@@ -489,6 +489,29 @@ a:hover {
   margin-bottom: 0.1rem;
 }
 
+
+/* ============================================================
+   BOOKS PAGE
+   ============================================================ */
+.book-title {
+  font-size: 1.15rem;
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  color: var(--navy);
+}
+
+.book-name {
+  font-weight: 700;
+}
+
+.book-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0.4rem 0 0;
+}
+
 /* ============================================================
    FOOTER — navy bookend (kept for optional use)
    ============================================================ */
