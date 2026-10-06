@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Python REPL colors (matches the reference image)
   const tokens = [
-    { text: '>>> ',                        color: '#D4D4AA' }, // prompt — olive
-    { text: 'print',                       color: '#DCDCAA' }, // keyword — yellow
+    { text: '>>> ',                        color: '#D4D4D4' }, // prompt — light gray
+    { text: 'print',                       color: '#D4D4D4' }, // keyword — light gray
     { text: '(',                           color: '#D4D4D4' }, // paren — light gray
     { text: '"',                           color: '#D4D4D4' }, // quote — light gray
     { text: "Hello, I'm Rya \u{1F44B}",    color: '#9CDCFE' }, // string — light blue
