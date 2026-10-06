@@ -282,6 +282,40 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
+/* ---------- Typing code line (Python REPL style) ---------- */
+.code-line {
+  background-color: var(--navy);
+  border-radius: 12px;
+  padding: 1rem 1.4rem;
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  display: inline-block;
+  margin-bottom: 1.6rem;
+  box-shadow: 0 6px 16px rgba(30, 58, 95, 0.2);
+  min-height: 1.3em;
+  line-height: 1.2;
+}
+
+#typing-code {
+  color: var(--white);
+}
+
+#typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.05em;
+  background-color: var(--white);
+  margin-left: 3px;
+  vertical-align: text-bottom;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
 /* ---------- Project cards ---------- */
 .card {
   background-color: var(--white);
@@ -383,6 +417,11 @@ a:hover {
 
   .right-column h1 {
     font-size: 1.6rem;
+  }
+
+  .code-line {
+    font-size: 1.05rem;
+    padding: 0.85rem 1.1rem;
   }
 }
 
