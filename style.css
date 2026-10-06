@@ -338,7 +338,9 @@ a:hover {
   50% { opacity: 0; }
 }
 
-/* ---------- Project cards ---------- */
+/* ============================================================
+   PROJECT CARDS
+   ============================================================ */
 .card {
   background-color: var(--white);
   border: 1px solid var(--border);
@@ -352,24 +354,6 @@ a:hover {
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 24px rgba(30, 58, 95, 0.12);
-}
-
-.card h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.15rem;
-  color: var(--navy);
-}
-
-.card-sub {
-  font-weight: 400;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-.card p {
-  margin: 0.4rem 0 0.8rem;
-  font-size: 0.98rem;
 }
 
 /* ---------- Card title as a link with an arrow ---------- */
@@ -391,50 +375,35 @@ a:hover {
   text-underline-offset: 3px;
 }
 
+.card-sub {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Short, subtle arrow */
 .card-title .arrow {
   display: inline-block;
-  margin-left: 4px;
-  font-size: 0.85em;
+  margin-left: 8px;
+  font-size: 0.65em;        /* smaller */
+  font-weight: 400;         /* thinner stroke */
   color: var(--navy);
-  transition: transform 0.2s ease;
+  opacity: 0.55;            /* subdued */
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .card-title a:hover .arrow {
   transform: translate(2px, -2px);
+  opacity: 1;
 }
 
-/* Tags sit directly under the title */
-.card .tags {
-  margin-top: 0;
-  margin-bottom: 0.9rem;
-}
-
-/* "Methods & Skills:" heading */
-.methods-heading {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--navy);
-  margin: 0.9rem 0 0.4rem;
-  letter-spacing: 0.01em;
-}
-
-.methods {
-  margin: 0.4rem 0 0.8rem 1.2rem;
-  padding: 0;
-  font-size: 0.95rem;
-  color: var(--text-muted);
-}
-
-.methods li {
-  margin-bottom: 0.2rem;
-}
-
+/* ---------- Tags ---------- */
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin-top: 0.6rem;
+  margin-top: 0;
+  margin-bottom: 0.9rem;
 }
 
 .tag {
@@ -445,6 +414,44 @@ a:hover {
   font-weight: 600;
   padding: 0.2rem 0.6rem;
   border-radius: 6px;
+}
+
+/* ============================================================
+   Project card body — uniform font, size, color, and spacing
+   ============================================================ */
+
+/* Objective paragraph */
+.card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0.55rem 0;
+}
+
+/* "Methods & Skills:" heading */
+.methods-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0.55rem 0 0.15rem;
+  letter-spacing: 0;
+}
+
+/* Bullet list */
+.methods {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 0.55rem 1.2rem;
+  padding: 0;
+}
+
+.methods li {
+  margin-bottom: 0.15rem;
 }
 
 /* ============================================================
