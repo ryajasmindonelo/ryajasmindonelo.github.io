@@ -23,6 +23,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100%;
 }
 
 *, *::before, *::after {
@@ -37,6 +38,9 @@ body {
   background-color: var(--white);
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body p {
@@ -75,6 +79,7 @@ a:hover {
   color: var(--white);
   padding: 0.5rem 2rem;
   box-shadow: 0 2px 10px rgba(30, 58, 95, 0.25);
+  flex-shrink: 0;
 }
 
 .nav-inner {
@@ -149,16 +154,19 @@ a:hover {
 }
 
 /* ============================================================
-   LAYOUT — two-column (home)
+   LAYOUT — two-column (home) — VERTICALLY CENTERED
    ============================================================ */
 .content {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;       /* ← centers content vertically */
+  justify-content: center;
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 2rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
   gap: 2.5rem;
-  align-items: flex-start;
 }
 
 /* ============================================================
@@ -472,8 +480,11 @@ a:hover {
 @media (max-width: 900px) {
   .content {
     flex-direction: column;
-    padding: 0 1.2rem;
+    align-items: stretch;    /* reset vertical centering when stacked */
+    justify-content: flex-start;
+    padding: 1.5rem 1.2rem;
     gap: 1.5rem;
+    flex: 0;
   }
 
   .content-single {
