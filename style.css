@@ -149,7 +149,7 @@ a:hover {
 }
 
 /* ============================================================
-   LAYOUT
+   LAYOUT — two-column (home)
    ============================================================ */
 .content {
   display: flex;
@@ -159,6 +159,27 @@ a:hover {
   padding: 0 2rem;
   gap: 2.5rem;
   align-items: flex-start;
+}
+
+/* ============================================================
+   LAYOUT — single centered column (projects)
+   ============================================================ */
+.content-single {
+  max-width: 820px;
+  margin: 2rem auto 4rem;
+  padding: 0 2rem;
+}
+
+.content-single h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.content-single h2 {
+  margin-top: 2.5rem;
+  color: var(--navy);
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--navy);
 }
 
 /* ---------- Left column — plain, no navy box ---------- */
@@ -379,7 +400,7 @@ a:hover {
 }
 
 /* ============================================================
-   FOOTER — navy bookend
+   FOOTER — navy bookend (kept for optional use)
    ============================================================ */
 .footer {
   background-color: var(--navy);
@@ -398,6 +419,14 @@ a:hover {
     flex-direction: column;
     padding: 0 1.2rem;
     gap: 1.5rem;
+  }
+
+  .content-single {
+    padding: 0 1.2rem;
+  }
+
+  .content-single h1 {
+    font-size: 1.8rem;
   }
 
   .left-column,
