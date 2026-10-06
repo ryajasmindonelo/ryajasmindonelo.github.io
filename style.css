@@ -160,7 +160,7 @@ a:hover {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;       /* ← centers content vertically */
+  align-items: center;
   justify-content: center;
   max-width: 1200px;
   width: 100%;
@@ -214,8 +214,8 @@ a:hover {
 
 .image-container img {
   width: 100%;
-  aspect-ratio: 1 / 1;   /* force square */
-  object-fit: cover;      /* crop to fill the square */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   display: block;
   border-radius: 10px;
 }
@@ -224,7 +224,7 @@ a:hover {
   color: var(--navy);
   font-size: 1.8rem;
   margin-bottom: 0.2rem;
-  white-space: nowrap;     /* keep on one line */
+  white-space: nowrap;
   letter-spacing: -0.01em;
 }
 
@@ -312,6 +312,27 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
+/* ---------- Intro label + list (home page) ---------- */
+.intro-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--navy);
+  font-size: 1rem;
+  margin: 1.2rem 0 0.4rem;
+}
+
+.intro-list {
+  margin: 0 0 1rem 1.2rem;
+  padding: 0;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.intro-list li {
+  margin-bottom: 0.2rem;
+}
+
 /* ---------- Typing code line (Python REPL style) ---------- */
 .code-line {
   background-color: var(--navy);
@@ -322,6 +343,7 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.02em;
   display: inline-block;
+  margin-top: 1.5rem;      /* pushes it down to align with the photo */
   margin-bottom: 1.6rem;
   box-shadow: 0 6px 16px rgba(30, 58, 95, 0.2);
   min-height: 1.3em;
@@ -364,7 +386,6 @@ a:hover {
   box-shadow: 0 10px 24px rgba(30, 58, 95, 0.12);
 }
 
-/* ---------- Card title as a link with an arrow ---------- */
 .card-title {
   margin-top: 0;
   margin-bottom: 0.6rem;
@@ -389,7 +410,6 @@ a:hover {
   font-size: 0.9rem;
 }
 
-/* Short, subtle arrow */
 .card-title .arrow {
   display: inline-block;
   margin-left: 8px;
@@ -405,7 +425,6 @@ a:hover {
   opacity: 1;
 }
 
-/* ---------- Tags ---------- */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -424,11 +443,7 @@ a:hover {
   border-radius: 6px;
 }
 
-/* ============================================================
-   Project card body — pure black text
-   ============================================================ */
-
-/* Objective paragraph */
+/* ---------- Project card body — pure black text ---------- */
 .card p {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
@@ -437,7 +452,6 @@ a:hover {
   margin: 0.55rem 0;
 }
 
-/* "Methods & Skills:" heading */
 .methods-heading {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
@@ -448,7 +462,6 @@ a:hover {
   letter-spacing: 0;
 }
 
-/* Bullet list */
 .methods {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
@@ -480,7 +493,7 @@ a:hover {
 @media (max-width: 900px) {
   .content {
     flex-direction: column;
-    align-items: stretch;    /* reset vertical centering when stacked */
+    align-items: stretch;
     justify-content: flex-start;
     padding: 1.5rem 1.2rem;
     gap: 1.5rem;
@@ -517,6 +530,7 @@ a:hover {
   .code-line {
     font-size: 1.05rem;
     padding: 0.85rem 1.1rem;
+    margin-top: 0;
   }
 }
 
