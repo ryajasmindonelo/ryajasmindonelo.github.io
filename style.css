@@ -14,6 +14,8 @@
   --border: #DDDFE2;        /* neutral border */
   --chip-bg: #E8EDF4;       /* soft blue-tinted chip fill */
   --chip-border: #D3DBE6;   /* chip border */
+
+  --photo-offset: 6rem;     /* ← tune this to align photo with first paragraph */
 }
 
 /* ============================================================
@@ -154,13 +156,13 @@ a:hover {
 }
 
 /* ============================================================
-   LAYOUT — two-column (home) — VERTICALLY CENTERED
+   LAYOUT — two-column (home)
    ============================================================ */
 .content {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;   /* ← both columns start at top */
   justify-content: center;
   max-width: 1200px;
   width: 100%;
@@ -198,7 +200,7 @@ a:hover {
   background-color: transparent;
   color: var(--text);
   border-radius: 0;
-  padding: 0;
+  padding: var(--photo-offset) 0 0;   /* ← pushes photo down to align */
 }
 
 .image-container {
@@ -350,8 +352,8 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.02em;
   display: inline-block;
-  margin-top: 1.5rem;
-  margin-bottom: 0.6rem;   /* ← tightened gap */
+  margin-top: 0;
+  margin-bottom: 0.6rem;
   box-shadow: 0 6px 16px rgba(30, 58, 95, 0.2);
   min-height: 1.3em;
   line-height: 1.2;
@@ -510,6 +512,10 @@ a:hover {
     padding: 1.5rem 1.2rem;
     gap: 1.5rem;
     flex: 0;
+  }
+
+  .left-column {
+    padding: 0;   /* reset the alignment offset on mobile */
   }
 
   .content-single {
