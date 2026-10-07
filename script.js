@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
       toggleButton.setAttribute('aria-expanded', isOpen);
     });
 
-    // Close menu when a link is clicked (mobile)
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         if (window.innerWidth <= 700) {
@@ -38,18 +37,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const codeEl = document.getElementById('typing-code');
   if (!codeEl) return;
 
-  // Python REPL colors
+  // >>> print("  → all white
+  // Hello, I'm Rya 👋  → blue
+  // ")  → all white
   const tokens = [
-    { text: '>>> ',                        color: '#9CA3AF' }, // prompt — light gray
-    { text: 'print',                       color: '#9CA3AF' }, // keyword — the blue from your image
-    { text: '(',                           color: '#9CA3AF' }, // paren — light gray
-    { text: '"',                           color: '#9CA3AF' }, // quote — light gray
-    { text: "Hello, I'm Rya \u{1F44B}",    color: '#6A9BD5' }, // string — same blue
-    { text: '"',                           color: '#9CA3AF' }, // quote — light gray
-    { text: ')',                           color: '#9CA3AF' }, // paren — light gray
+    { text: '>>> ',                        color: '#FFFFFF' },
+    { text: 'print',                       color: '#FFFFFF' },
+    { text: '(',                           color: '#FFFFFF' },
+    { text: '"',                           color: '#FFFFFF' },
+    { text: "Hello, I'm Rya \u{1F44B}",    color: '#6A9BD5' },
+    { text: '"',                           color: '#FFFFFF' },
+    { text: ')',                           color: '#FFFFFF' },
   ];
 
-  // Flatten into an array of single characters (handles emoji correctly)
   const chars = [];
   tokens.forEach(function (t) {
     for (const ch of t.text) chars.push({ ch: ch, color: t.color });
@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function typeNext() {
     if (i >= chars.length) return;
 
-    // Rebuild the visible HTML up to the current character
     let html = '';
     for (let j = 0; j <= i; j++) {
       html +=
@@ -81,6 +80,5 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(typeNext, 55 + Math.random() * 60);
   }
 
-  // Small delay so the page settles first
   setTimeout(typeNext, 300);
 })();
