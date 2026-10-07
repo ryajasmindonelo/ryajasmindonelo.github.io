@@ -2,18 +2,18 @@
    COLOR SYSTEM — one navy, used everywhere
    ============================================================ */
 :root {
-  --navy: #1E3A5F;          /* the color from your image */
-  --navy-dark: #16293F;     /* hover / pressed */
-  --navy-darker: #0F1D2E;   /* deepest accents */
+  --navy: #1E3A5F;
+  --navy-dark: #16293F;
+  --navy-darker: #0F1D2E;
 
-  --text: #1A1A1A;          /* body text */
-  --text-muted: #5A6270;    /* muted text */
+  --text: #1A1A1A;
+  --text-muted: #5A6270;
 
   --white: #FFFFFF;
-  --gray-50: #F7F8F9;       /* neutral card bg */
-  --border: #DDDFE2;        /* neutral border */
-  --chip-bg: #E8EDF4;       /* soft blue-tinted chip fill */
-  --chip-border: #D3DBE6;   /* chip border */
+  --gray-50: #F7F8F9;
+  --border: #DDDFE2;
+  --chip-bg: #E8EDF4;
+  --chip-border: #D3DBE6;
 }
 
 /* ============================================================
@@ -191,7 +191,7 @@ a:hover {
 }
 
 /* ============================================================
-   LEFT COLUMN — sticky, space-between, aligned bottom
+   LEFT COLUMN — sticky, connect pinned to bottom
    ============================================================ */
 .left-column {
   flex: 1;
@@ -202,14 +202,12 @@ a:hover {
   border-radius: 0;
   padding: 0;
 
-  /* Sticky + push connect block to bottom */
   position: sticky;
-  top: 1.5rem;               /* distance from top of viewport when stuck */
-  align-self: flex-start;    /* required for sticky inside flex */
+  top: 1.5rem;
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 70vh;          /* gives room for the connect block to drop */
+  min-height: 72vh;
 }
 
 .image-container {
@@ -251,7 +249,7 @@ a:hover {
 
 /* Skills chips — more space below the name */
 .skills {
-  margin-top: 4rem;          /* larger gap between name and Toolkit */
+  margin-top: 4rem;
   align-self: center;
   width: 100%;
 }
@@ -283,12 +281,28 @@ a:hover {
   border: 1px solid var(--chip-border);
 }
 
+/* ---------- CTA paragraph in left column ---------- */
+.left-cta {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text);
+  margin: 2.2rem 0 0;
+  padding: 0 0.4rem;
+  text-align: center;
+}
+
+.left-cta a {
+  color: var(--navy);
+  font-weight: 600;
+}
+
 /* ---------- Connect list (left column) ---------- */
 .connect {
-  margin-top: auto;          /* pushes it to the bottom of the sticky column */
+  margin-top: auto;
   text-align: center;
   align-self: center;
   width: 100%;
+  padding-top: 2rem;
 }
 
 .connect h2 {
@@ -409,7 +423,6 @@ a:hover {
   line-height: 1.2;
 }
 
-/* Tighten the paragraph immediately after the code line */
 .code-line + p {
   margin-top: 0.4rem;
 }
@@ -562,7 +575,7 @@ a:hover {
 }
 
 /* ============================================================
-   FOOTER — navy bookend (kept for optional use)
+   FOOTER
    ============================================================ */
 .footer {
   background-color: var(--navy);
@@ -586,7 +599,6 @@ a:hover {
     flex: 0;
   }
 
-  /* Disable sticky on mobile */
   .left-column {
     position: static;
     top: auto;
@@ -598,8 +610,13 @@ a:hover {
     margin-top: 2.2rem;
   }
 
+  .left-cta {
+    margin-top: 2rem;
+  }
+
   .connect {
-    margin-top: 3rem;
+    margin-top: 2rem;
+    padding-top: 0;
   }
 
   .content-single {
