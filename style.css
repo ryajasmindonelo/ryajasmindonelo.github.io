@@ -14,7 +14,7 @@
   --border: #DDDFE2;
   --chip-bg: #E8EDF4;
   --chip-border: #D3DBE6;
-  --highlight-blue: #6A9BD5;   /* same blue as "Hello, I'm Rya" */
+  --highlight-blue: #6A9BD5;
 }
 
 /* ============================================================
@@ -258,10 +258,10 @@ a:hover {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--white);          /* white text for contrast on the blue */
+  color: var(--white);
   background-color: var(--highlight-blue);
   padding: 0.25rem 0.9rem;
-  border-radius: 0;             /* rectangle, no rounded corners */
+  border-radius: 0;
   letter-spacing: 0.01em;
   text-align: center;
 }
@@ -294,9 +294,9 @@ a:hover {
 }
 
 /* ---------- CTA in left column ---------- */
-/* Moderate space between chips and the CTA label */
+/* Tighter space between chips and the CTA label */
 .left-heading.left-cta-label {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
 .left-cta-detail {
@@ -375,7 +375,7 @@ a:hover {
 }
 
 .right-column h2 {
-  margin-top: 2.5rem;
+  margin-top: 1.8rem;
   color: var(--navy);
   padding-bottom: 0.35rem;
   border-bottom: 2px solid var(--navy);
@@ -394,20 +394,20 @@ a:hover {
   font-weight: 600;
   color: var(--navy);
   font-size: 17px;
-  line-height: 1.65;
-  margin: 1.2rem 0 0.4rem;
+  line-height: 1.4;
+  margin: 0.9rem 0 0.3rem;
 }
 
 .intro-list {
-  margin: 0 0 1rem 1.2rem;
+  margin: 0 0 0.6rem 1.2rem;
   padding: 0;
   font-size: 17px;
-  line-height: 1.65;
+  line-height: 1.5;
   color: var(--text);
 }
 
 .intro-list li {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.1rem;
 }
 
 /* Blue highlighted phrase */
@@ -621,7 +621,7 @@ a:hover {
   }
 
   .left-heading.left-cta-label {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .connect {
