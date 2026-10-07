@@ -166,8 +166,8 @@ a:hover {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem;
-  gap: 2.5rem;
+  padding: 1.25rem 2rem;
+  gap: 2rem;
 }
 
 /* ============================================================
@@ -192,7 +192,7 @@ a:hover {
 }
 
 /* ============================================================
-   LEFT COLUMN — sticky, connect pinned to bottom
+   LEFT COLUMN — sticky
    ============================================================ */
 .left-column {
   flex: 1;
@@ -208,7 +208,6 @@ a:hover {
   align-self: flex-start;
   display: flex;
   flex-direction: column;
-  min-height: 72vh;
 }
 
 .image-container {
@@ -216,9 +215,9 @@ a:hover {
   padding: 6px;
   display: inline-block;
   width: 70%;
-  max-width: 220px;
+  max-width: 190px;
   border-radius: 14px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   box-shadow: 0 6px 16px rgba(30, 58, 95, 0.18);
   align-self: center;
 }
@@ -294,7 +293,6 @@ a:hover {
 }
 
 /* ---------- CTA in left column ---------- */
-/* Tighter space between chips and the CTA label */
 .left-heading.left-cta-label {
   margin-top: 1.5rem;
 }
@@ -315,11 +313,11 @@ a:hover {
 
 /* ---------- Connect list (left column) ---------- */
 .connect {
-  margin-top: auto;
+  margin-top: 1.5rem;
   text-align: center;
   align-self: center;
   width: 100%;
-  padding-top: 1.5rem;
+  padding-top: 0;
 }
 
 .connect-list {
@@ -612,7 +610,6 @@ a:hover {
   .left-column {
     position: static;
     top: auto;
-    min-height: auto;
     display: block;
   }
 
@@ -625,7 +622,7 @@ a:hover {
   }
 
   .connect {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     padding-top: 0;
   }
 
@@ -645,7 +642,7 @@ a:hover {
 
   .image-container {
     width: 50%;
-    max-width: 200px;
+    max-width: 180px;
   }
 
   .left-column .title {
