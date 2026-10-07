@@ -161,7 +161,7 @@ a:hover {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: stretch;          /* columns stretch to the same height */
   justify-content: center;
   max-width: 1200px;
   width: 100%;
@@ -192,7 +192,7 @@ a:hover {
 }
 
 /* ============================================================
-   LEFT COLUMN — sticky
+   LEFT COLUMN — natural flow, connect pinned to bottom
    ============================================================ */
 .left-column {
   flex: 1;
@@ -203,9 +203,6 @@ a:hover {
   border-radius: 0;
   padding: 0;
 
-  position: sticky;
-  top: 1.5rem;
-  align-self: flex-start;
   display: flex;
   flex-direction: column;
 }
@@ -311,13 +308,13 @@ a:hover {
   font-weight: 600;
 }
 
-/* ---------- Connect list (left column) ---------- */
+/* ---------- Connect list (left column) — pinned to bottom ---------- */
 .connect {
-  margin-top: 1.5rem;
+  margin-top: auto;              /* drops to the bottom of the stretched column */
   text-align: center;
   align-self: center;
   width: 100%;
-  padding-top: 0;
+  padding-top: 1.5rem;
 }
 
 .connect-list {
@@ -608,8 +605,6 @@ a:hover {
   }
 
   .left-column {
-    position: static;
-    top: auto;
     display: block;
   }
 
