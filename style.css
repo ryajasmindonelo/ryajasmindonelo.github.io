@@ -266,9 +266,9 @@ a:hover {
   text-align: center;
 }
 
-/* Skills block — modest gap below the name */
+/* Skills block — tight to the name */
 .skills {
-  margin-top: 1.6rem;
+  margin-top: 0.6rem;
   align-self: center;
   width: 100%;
 }
@@ -294,9 +294,9 @@ a:hover {
 }
 
 /* ---------- CTA in left column ---------- */
-/* Extra space between chips and the CTA label */
+/* More space between chips and the CTA label */
 .left-heading.left-cta-label {
-  margin-top: 3.5rem;
+  margin-top: 5rem;
 }
 
 .left-cta-detail {
@@ -617,11 +617,11 @@ a:hover {
   }
 
   .skills {
-    margin-top: 1.4rem;
+    margin-top: 0.6rem;
   }
 
   .left-heading.left-cta-label {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   .connect {
