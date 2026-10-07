@@ -161,7 +161,7 @@ a:hover {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;       /* natural height — no stretched columns */
+  align-items: flex-start;
   justify-content: center;
   max-width: 1200px;
   width: 100%;
@@ -207,13 +207,14 @@ a:hover {
   flex-direction: column;
 }
 
+/* Photo — SQUARE, no rounded corners */
 .image-container {
   background-color: var(--navy);
   padding: 6px;
   display: inline-block;
   width: 70%;
   max-width: 190px;
-  border-radius: 14px;
+  border-radius: 0;             /* ← square */
   margin-bottom: 1rem;
   box-shadow: 0 6px 16px rgba(30, 58, 95, 0.18);
   align-self: center;
@@ -224,7 +225,7 @@ a:hover {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
-  border-radius: 10px;
+  border-radius: 0;             /* ← square */
 }
 
 .left-column .title {
@@ -245,7 +246,7 @@ a:hover {
 }
 
 /* ============================================================
-   HIGHLIGHTED HEADINGS (CTA label, Let's Connect)
+   HIGHLIGHTED HEADINGS (CTA label, Let's Connect) — NAVY
    ============================================================ */
 .left-heading {
   display: block;
@@ -255,9 +256,9 @@ a:hover {
   font-size: 1rem;
   font-weight: 600;
   color: var(--white);
-  background-color: var(--highlight-blue);
+  background-color: var(--navy);   /* ← same navy as the code line */
   padding: 0.25rem 0.9rem;
-  border-radius: 0;
+  border-radius: 0;                /* square */
   letter-spacing: 0.01em;
   text-align: center;
 }
@@ -411,10 +412,10 @@ a:hover {
   font-weight: 600;
 }
 
-/* ---------- Typing code line (Python REPL style) ---------- */
+/* ---------- Typing code line — SQUARE, no rounded corners ---------- */
 .code-line {
   background-color: var(--navy);
-  border-radius: 12px;
+  border-radius: 0;               /* ← square */
   padding: 1rem 1.4rem;
   font-family: 'Courier New', 'Consolas', monospace;
   font-size: 1.3rem;
