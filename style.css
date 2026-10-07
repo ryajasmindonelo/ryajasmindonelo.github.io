@@ -192,7 +192,7 @@ a:hover {
 }
 
 /* ============================================================
-   LEFT COLUMN
+   LEFT COLUMN — vertically centered, even gaps
    ============================================================ */
 .left-column {
   flex: 1;
@@ -205,6 +205,7 @@ a:hover {
 
   display: flex;
   flex-direction: column;
+  justify-content: center;       /* ← centers whole column content */
 }
 
 .image-container {
@@ -291,7 +292,7 @@ a:hover {
 
 /* ---------- CTA in left column — clickable pill ---------- */
 .left-heading.left-cta-label {
-  margin-top: auto;
+  margin-top: 1.5rem;            /* ← was auto — even, smaller gap */
   cursor: pointer;
   color: var(--white);
   text-decoration: none;
@@ -322,9 +323,9 @@ a:hover {
   font-weight: 600;
 }
 
-/* ---------- Connect list ---------- */
+/* ---------- Connect list — even gap ---------- */
 .connect {
-  margin-top: auto;
+  margin-top: 1.5rem;            /* ← was auto — matches CTA gap */
   text-align: center;
   align-self: center;
   width: 100%;
