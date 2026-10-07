@@ -155,7 +155,7 @@ a:hover {
 }
 
 /* ============================================================
-   LAYOUT — two-column (home)
+   LAYOUT — two-column (home) — equal top/bottom padding
    ============================================================ */
 .content {
   flex: 1;
@@ -166,7 +166,7 @@ a:hover {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem 2rem 1.5rem;
+  padding: 1.5rem 2rem;          /* ← equal top and bottom */
   gap: 2rem;
 }
 
@@ -252,11 +252,11 @@ a:hover {
   width: fit-content;
   margin: 0 auto 0.9rem;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;             /* ← slightly bigger (was 1rem) */
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--white);
   background-color: var(--navy);
-  padding: 0.3rem 1rem;          /* ← a touch more padding */
+  padding: 0.3rem 1rem;
   border-radius: 0;
   letter-spacing: 0.01em;
   text-align: center;
@@ -295,7 +295,7 @@ a:hover {
 }
 
 .left-cta-detail {
-  font-size: 0.98rem;            /* ← slightly bigger (was 0.9rem) */
+  font-size: 0.98rem;
   line-height: 1.55;
   color: var(--text);
   margin: 0;
@@ -331,12 +331,12 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.98rem;            /* ← slightly bigger (was 0.9rem) */
+  font-size: 0.98rem;
   list-style: none;
 }
 
 .connect-list i {
-  font-size: 1.15rem;            /* ← slightly bigger (was 1.05rem) */
+  font-size: 1.15rem;
   color: var(--navy);
   flex-shrink: 0;
   line-height: 1;
@@ -345,7 +345,7 @@ a:hover {
 .connect-list a {
   color: var(--navy);
   font-weight: 500;
-  font-size: 0.98rem;            /* ← slightly bigger (was 0.9rem) */
+  font-size: 0.98rem;
   text-decoration: none;
 }
 
@@ -374,7 +374,7 @@ a:hover {
 }
 
 .right-column h2 {
-  margin-top: 1.8rem;
+  margin-top: 1.5rem;
   color: var(--navy);
   padding-bottom: 0.35rem;
   border-bottom: 2px solid var(--navy);
@@ -387,21 +387,21 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
-/* ---------- Intro label + list ---------- */
+/* ---------- Intro label + list (tighter so the page fits) ---------- */
 .intro-label {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: var(--navy);
   font-size: 17px;
   line-height: 1.4;
-  margin: 0.9rem 0 0.3rem;
+  margin: 0.7rem 0 0.25rem;      /* was 0.9rem 0 0.3rem */
 }
 
 .intro-list {
-  margin: 0 0 0.6rem 1.2rem;
+  margin: 0 0 0.5rem 1.2rem;     /* was 0 0 0.6rem */
   padding: 0;
   font-size: 17px;
-  line-height: 1.5;
+  line-height: 1.45;             /* was 1.5 */
   color: var(--text);
 }
 
