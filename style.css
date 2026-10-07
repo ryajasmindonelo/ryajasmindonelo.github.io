@@ -155,7 +155,7 @@ a:hover {
 }
 
 /* ============================================================
-   LAYOUT — two-column (home) — stretched, one screen
+   LAYOUT — two-column (home)
    ============================================================ */
 .content {
   flex: 1;
@@ -192,7 +192,7 @@ a:hover {
 }
 
 /* ============================================================
-   LEFT COLUMN — natural flow, connect pinned to bottom
+   LEFT COLUMN — sticky-flex, auto-margin gaps
    ============================================================ */
 .left-column {
   flex: 1;
@@ -290,9 +290,9 @@ a:hover {
   border: 1px solid var(--chip-border);
 }
 
-/* ---------- CTA in left column ---------- */
+/* ---------- CTA in left column — auto gap ---------- */
 .left-heading.left-cta-label {
-  margin-top: 2rem;
+  margin-top: auto;              /* ← free space distributes evenly */
 }
 
 .left-cta-detail {
@@ -309,13 +309,13 @@ a:hover {
   font-weight: 600;
 }
 
-/* ---------- Connect list — pinned to bottom of stretched column ---------- */
+/* ---------- Connect list — auto gap, pinned toward bottom ---------- */
 .connect {
-  margin-top: auto;              /* pushes to bottom */
+  margin-top: auto;              /* ← same as CTA label, so spaces even */
   text-align: center;
   align-self: center;
   width: 100%;
-  padding-top: 1.5rem;
+  padding-top: 0;
 }
 
 .connect-list {
@@ -364,7 +364,6 @@ a:hover {
   min-width: 320px;
 }
 
-/* Remove bottom margin from last element so alignment is exact */
 .right-column > *:last-child {
   margin-bottom: 0;
 }
@@ -389,7 +388,7 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
-/* ---------- Intro label + list (home page) ---------- */
+/* ---------- Intro label + list ---------- */
 .intro-label {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -618,13 +617,13 @@ a:hover {
     margin-top: 1rem;
   }
 
+  /* On mobile, use fixed gaps instead of auto */
   .left-heading.left-cta-label {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
 
   .connect {
-    margin-top: 1.5rem;
-    padding-top: 0;
+    margin-top: 2rem;
   }
 
   .content-single {
