@@ -14,6 +14,7 @@
   --border: #DDDFE2;
   --chip-bg: #E8EDF4;
   --chip-border: #D3DBE6;
+  --highlight-blue: #DBEAFE;
 }
 
 /* ============================================================
@@ -247,18 +248,29 @@ a:hover {
   align-self: center;
 }
 
-/* Skills chips — more space below the name */
-.skills {
-  margin-top: 4rem;
-  align-self: center;
-  width: 100%;
+/* ============================================================
+   HIGHLIGHTED HEADINGS (CTA label, Let's Connect)
+   ============================================================ */
+.left-heading {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  background-color: var(--highlight-blue);
+  padding: 0.2rem 0.9rem;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+  text-align: center;
 }
 
-.skills h2 {
-  color: var(--navy);
-  font-size: 1.15rem;
-  margin-top: 0;
-  margin-bottom: 0.9rem;
+/* Skills block — modest gap below the name */
+.skills {
+  margin-top: 1.6rem;
+  align-self: center;
+  width: 100%;
 }
 
 .chip-list {
@@ -281,17 +293,22 @@ a:hover {
   border: 1px solid var(--chip-border);
 }
 
-/* ---------- CTA paragraph in left column ---------- */
-.left-cta {
+/* ---------- CTA in left column ---------- */
+/* Extra space between chips and the CTA label */
+.left-heading.left-cta-label {
+  margin-top: 3.5rem;
+}
+
+.left-cta-detail {
   font-size: 0.9rem;
   line-height: 1.55;
   color: var(--text);
-  margin: 2.2rem 0 0;
+  margin: 0;
   padding: 0 0.4rem;
   text-align: center;
 }
 
-.left-cta a {
+.left-cta-detail a {
   color: var(--navy);
   font-weight: 600;
 }
@@ -302,14 +319,7 @@ a:hover {
   text-align: center;
   align-self: center;
   width: 100%;
-  padding-top: 2rem;
-}
-
-.connect h2 {
-  color: var(--navy);
-  font-size: 1.15rem;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+  padding-top: 2.5rem;
 }
 
 .connect-list {
@@ -607,15 +617,15 @@ a:hover {
   }
 
   .skills {
-    margin-top: 2.2rem;
+    margin-top: 1.4rem;
   }
 
-  .left-cta {
+  .left-heading.left-cta-label {
     margin-top: 2rem;
   }
 
   .connect {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     padding-top: 0;
   }
 
