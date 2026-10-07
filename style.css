@@ -191,7 +191,7 @@ a:hover {
 }
 
 /* ============================================================
-   LEFT COLUMN — sticky (photo, name, toolkit)
+   LEFT COLUMN — sticky (photo, name, toolkit, connect)
    ============================================================ */
 .left-column {
   flex: 1;
@@ -242,30 +242,11 @@ a:hover {
   margin-bottom: 1.4rem;
 }
 
-.handle {
-  display: flex;
-  justify-content: center;
-  gap: 1.2rem;
-  margin-bottom: 1.8rem;
-}
-
-.handle a {
-  color: var(--navy);
-  transition: opacity 0.2s ease;
-  text-decoration: none;
-}
-
-.handle a:hover {
-  color: var(--navy);
-  opacity: 0.65;
-  text-decoration: none;
-}
-
-.handle i {
-  font-size: 1.6rem;
-}
-
 /* Skills chips */
+.skills {
+  margin-top: 1.4rem;
+}
+
 .skills h2 {
   color: var(--navy);
   font-size: 1.15rem;
@@ -291,6 +272,55 @@ a:hover {
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   border: 1px solid var(--chip-border);
+}
+
+/* ---------- Connect list (left column) ---------- */
+.connect {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.connect h2 {
+  color: var(--navy);
+  font-size: 1.15rem;
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+}
+
+.connect-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  text-align: left;
+}
+
+.connect-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+}
+
+.connect-list i {
+  font-size: 1.2rem;
+  color: var(--navy);
+  flex-shrink: 0;
+}
+
+.connect-list a {
+  color: var(--navy);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.connect-list a:hover {
+  color: var(--navy-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ============================================================
@@ -543,7 +573,7 @@ a:hover {
     flex: 0;
   }
 
-  /* Disable sticky on mobile so it doesn't pin mid-scroll */
+  /* Disable sticky on mobile */
   .left-column {
     position: static;
     top: auto;
