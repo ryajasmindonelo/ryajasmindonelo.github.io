@@ -161,7 +161,7 @@ a:hover {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;          /* columns stretch to the same height */
+  align-items: flex-start;       /* natural height — no stretched columns */
   justify-content: center;
   max-width: 1200px;
   width: 100%;
@@ -192,7 +192,7 @@ a:hover {
 }
 
 /* ============================================================
-   LEFT COLUMN — natural flow, connect pinned to bottom
+   LEFT COLUMN — natural flow
    ============================================================ */
 .left-column {
   flex: 1;
@@ -262,9 +262,9 @@ a:hover {
   text-align: center;
 }
 
-/* Skills block — tight to the name */
+/* Skills block */
 .skills {
-  margin-top: 0.6rem;
+  margin-top: 1rem;
   align-self: center;
   width: 100%;
 }
@@ -291,7 +291,7 @@ a:hover {
 
 /* ---------- CTA in left column ---------- */
 .left-heading.left-cta-label {
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 }
 
 .left-cta-detail {
@@ -308,13 +308,13 @@ a:hover {
   font-weight: 600;
 }
 
-/* ---------- Connect list (left column) — pinned to bottom ---------- */
+/* ---------- Connect list (left column) ---------- */
 .connect {
-  margin-top: auto;              /* drops to the bottom of the stretched column */
+  margin-top: 2.5rem;
   text-align: center;
   align-self: center;
   width: 100%;
-  padding-top: 1.5rem;
+  padding-top: 0;
 }
 
 .connect-list {
@@ -609,11 +609,11 @@ a:hover {
   }
 
   .skills {
-    margin-top: 0.6rem;
+    margin-top: 1rem;
   }
 
   .left-heading.left-cta-label {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
 
   .connect {
