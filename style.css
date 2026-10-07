@@ -155,7 +155,7 @@ a:hover {
 }
 
 /* ============================================================
-   LAYOUT — two-column (home) — equal top/bottom padding
+   LAYOUT — two-column (home)
    ============================================================ */
 .content {
   flex: 1;
@@ -293,12 +293,18 @@ a:hover {
 .left-heading.left-cta-label {
   margin-top: auto;
   cursor: pointer;
+  color: var(--white);
   text-decoration: none;
 }
 
-.left-heading.left-cta-label:hover {
-  color: var(--white);
-  text-decoration: none;
+/* Force white on all link states — overrides global a:hover */
+.left-heading.left-cta-label:hover,
+.left-heading.left-cta-label:focus,
+.left-heading.left-cta-label:active,
+.left-heading.left-cta-label:visited {
+  color: var(--white) !important;
+  background-color: var(--navy);
+  text-decoration: none !important;
   opacity: 0.9;
 }
 
