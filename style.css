@@ -14,7 +14,7 @@
   --border: #DDDFE2;
   --chip-bg: #E8EDF4;
   --chip-border: #D3DBE6;
-  --highlight-blue: #DBEAFE;
+  --highlight-blue: #6A9BD5;   /* same blue as "Hello, I'm Rya" */
 }
 
 /* ============================================================
@@ -258,10 +258,10 @@ a:hover {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--white);          /* white text for contrast on the blue */
   background-color: var(--highlight-blue);
-  padding: 0.2rem 0.9rem;
-  border-radius: 6px;
+  padding: 0.25rem 0.9rem;
+  border-radius: 0;             /* rectangle, no rounded corners */
   letter-spacing: 0.01em;
   text-align: center;
 }
@@ -294,9 +294,9 @@ a:hover {
 }
 
 /* ---------- CTA in left column ---------- */
-/* More space between chips and the CTA label */
+/* Moderate space between chips and the CTA label */
 .left-heading.left-cta-label {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .left-cta-detail {
@@ -319,7 +319,7 @@ a:hover {
   text-align: center;
   align-self: center;
   width: 100%;
-  padding-top: 2.5rem;
+  padding-top: 1.5rem;
 }
 
 .connect-list {
@@ -621,11 +621,11 @@ a:hover {
   }
 
   .left-heading.left-cta-label {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
   .connect {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     padding-top: 0;
   }
 
