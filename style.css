@@ -171,7 +171,7 @@ a:hover {
 }
 
 /* ============================================================
-   LAYOUT — single centered column (projects, shelf)
+   LAYOUT — single centered column (projects, shelf, beyond)
    ============================================================ */
 .content-single {
   max-width: 820px;
@@ -192,7 +192,7 @@ a:hover {
 }
 
 /* ============================================================
-   LEFT COLUMN — vertically centered, even gaps
+   LEFT COLUMN
    ============================================================ */
 .left-column {
   flex: 1;
@@ -205,7 +205,7 @@ a:hover {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;       /* ← centers whole column content */
+  justify-content: center;
 }
 
 .image-container {
@@ -292,13 +292,12 @@ a:hover {
 
 /* ---------- CTA in left column — clickable pill ---------- */
 .left-heading.left-cta-label {
-  margin-top: 1.5rem;            /* ← was auto — even, smaller gap */
+  margin-top: 1.5rem;
   cursor: pointer;
   color: var(--white);
   text-decoration: none;
 }
 
-/* Force white on all link states — overrides global a:hover */
 .left-heading.left-cta-label:hover,
 .left-heading.left-cta-label:focus,
 .left-heading.left-cta-label:active,
@@ -323,9 +322,9 @@ a:hover {
   font-weight: 600;
 }
 
-/* ---------- Connect list — even gap ---------- */
+/* ---------- Connect list ---------- */
 .connect {
-  margin-top: 1.5rem;            /* ← was auto — matches CTA gap */
+  margin-top: 1.5rem;
   text-align: center;
   align-self: center;
   width: 100%;
@@ -451,11 +450,16 @@ a:hover {
   margin-top: 0.4rem;
 }
 
-#typing-code {
+/* Mobile code-line hidden by default — shown only on mobile */
+.code-line-mobile {
+  display: none;
+}
+
+.typing-code {
   color: var(--white);
 }
 
-#typing-cursor {
+.typing-cursor {
   display: inline-block;
   width: 2px;
   height: 1.05em;
@@ -639,6 +643,20 @@ a:hover {
     margin-top: 2rem;
   }
 
+  /* Swap: hide the desktop code-line, show the mobile one */
+  .code-line-desktop {
+    display: none;
+  }
+
+  .code-line-mobile {
+    display: inline-block;
+    align-self: center;
+    margin: 0.5rem auto 1.25rem;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    max-width: 100%;
+  }
+
   .content-single {
     padding: 0 1.2rem;
   }
@@ -664,12 +682,6 @@ a:hover {
 
   .right-column h1 {
     font-size: 1.6rem;
-  }
-
-  .code-line {
-    font-size: 1.05rem;
-    padding: 0.85rem 1.1rem;
-    margin-top: 0;
   }
 }
 
