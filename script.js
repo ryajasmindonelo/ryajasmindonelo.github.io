@@ -34,12 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
 // Typing animation for the Python-style greeting
 // ============================================================
 (function () {
-  const codeEl = document.getElementById('typing-code');
-  if (!codeEl) return;
+  const codeEls = document.querySelectorAll('.typing-code');
+  if (!codeEls.length) return;
 
-  // >>> print("  → all white
-  // Hello, I'm Rya 👋  → blue
-  // ")  → all white
   const tokens = [
     { text: '>>> ',                        color: '#FFFFFF' },
     { text: 'print',                       color: '#FFFFFF' },
@@ -74,7 +71,10 @@ document.addEventListener('DOMContentLoaded', function () {
         escapeHtml(chars[j].ch) +
         '</span>';
     }
-    codeEl.innerHTML = html;
+
+    codeEls.forEach(function (el) {
+      el.innerHTML = html;
+    });
 
     i++;
     setTimeout(typeNext, 55 + Math.random() * 60);
